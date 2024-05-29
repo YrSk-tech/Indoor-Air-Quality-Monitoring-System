@@ -1,3 +1,4 @@
+// co2_task.c
 #include "co2_task.h"
 
 void CO2_Task(void* pvParameters)
@@ -38,7 +39,6 @@ void CO2_Task(void* pvParameters)
         int concentration = ihigh_co2 * 256 + ilow_co2;
 
         printf("\r\nCO2 Concentration = %d ppm\r\n", concentration);
-
         vTaskDelay(pdMS_TO_TICKS(1000));
     }
 }

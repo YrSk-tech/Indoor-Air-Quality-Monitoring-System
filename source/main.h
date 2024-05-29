@@ -34,6 +34,7 @@ struct readings
 	float humidity;
 	float temperature;
 	uint8 result_code;
+    int co2; // Add CO2 concentration field
 };
 
 #endif /* SOURCE_MAIN_H_ */

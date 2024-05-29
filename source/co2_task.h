@@ -1,3 +1,4 @@
+// co2_task.h
 #ifndef CO2_TASK_H
 #define CO2_TASK_H
 
@@ -8,7 +9,6 @@
 #include "task.h"
 #include "queue.h"
 
-// Macros for CO2 sensor UART communication
 #define TX_CO2 P12_1
 #define RX_CO2 P12_0
 #define DATA_BITS_8 8
