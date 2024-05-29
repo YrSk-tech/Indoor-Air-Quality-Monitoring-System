@@ -2,20 +2,10 @@
 #include <dht_task.h>
 #include <print_task.h>
 #include "lcd_i2c.h"
-
-
-
-
+#include "co2_task.h"
 
 /* I2C bus frequency */
 #define I2C_FREQ                (400000UL)
-
-
-
-
-
-
-
 
 
 /******************************************************************************
@@ -99,6 +89,11 @@ int main(void)
 
     /* If the task creation failed stop the program execution */
     CY_ASSERT(result == CY_RSLT_SUCCESS);
+
+
+    // Add this in the main function before starting the scheduler
+    QueueHandle_t co2_queue = xQueueCreate(5, sizeof(int));
+    xTaskCreate(CO2_Task, "CO2 Task", configMINIMAL_STACK_SIZE, (void*)co2_queue, 2, NULL);
 
     /* To avoid compiler warning */
     (void) result;
