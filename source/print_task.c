@@ -53,7 +53,8 @@ void Print_Task(void* pvParameters)
 
 			printf("\r\nHumidity  =   %.2f\r\n",DHT_reading.humidity);
 			printf("\r\nTemperature  =   %.2f\r\n",DHT_reading.temperature);
-			printf("\r\nCO2 = \r\n");
+			//C02 SENSOR not working correctly
+ 			printf("\r\nCO2 = \r\n");
 
 
             // Convert humidity to string
