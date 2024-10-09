@@ -3,20 +3,8 @@
 #include <print_task.h>
 #include "lcd_i2c.h"
 
-
-
-
-
 /* I2C bus frequency */
 #define I2C_FREQ                (400000UL)
-
-
-
-
-
-
-
-
 
 /******************************************************************************
 * Global Variables
@@ -25,11 +13,8 @@ cyhal_i2c_t mI2C; // This is the declaration of mI2C
 
 cyhal_i2c_cfg_t mI2C_cfg;
 
-
-//
 // Define global variable for backlight state
 uint8_t backlight_state = 1;
-
 
 /* This enables RTOS aware debugging. */
 volatile int uxTopUsedPriority;
@@ -38,14 +23,7 @@ volatile int uxTopUsedPriority;
 int main(void)
 {
     cy_rslt_t result;
-//
-    /*LCD I2C object declaration*/
 
-//	cyhal_i2c_t mI2C; // This is the declaration of mI2C
-//
-//	cyhal_i2c_cfg_t mI2C_cfg;
-
-//
 //    /* This enables RTOS aware debugging in OpenOCD. */
     uxTopUsedPriority = configMAX_PRIORITIES - 1;
 
